@@ -87,13 +87,14 @@ h3{
 /* calling on the section form to quicly see which form im calling on */
 /* creating the background of the form to give it that called background. */
 /* calling on boder-radius to beable to make the form backgound have rounded edge */
+
 .section form{
     background: #f7f7ff;
     border-radius: 20px;
     width: 300px;
     height: 250px;
     padding: 10px;
-    text-align: center; 
+    text-align: center;  
 }
 /* designing for the form button : chaning the colour, using border-radius and border again to make the button rounded and making the font size larger to be able to see it better instead of all on the the tag itself in the list  */
 .formbutton{
