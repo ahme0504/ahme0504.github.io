@@ -4,66 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookings</title>
-    <link rel="stylessheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.png" alt="Artistic Nails and Spa logo">
+        <h1>Artistic Nails And Spa</h1>
         <!-- Using a checkbox to make a hamburger menu for moblie -->
+        <!-- link the labels "for" with the id of input to be able to check the label instead of the check box which is what makes the nav menu work™ -->
          <input type="checkbox" class="menu-btn" id="menu-btn">
          <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
-         <ul>
+         <ul class ="nav-menu">
              <li><a href="home.html">Home</a></li>
              <li><a href="our-techicians.html">Our Techicians</a></li>
              <li><a href="booking.html">Bookings</a></li>
          </ul>
     </header>
-    <main>
-        <H2>Book A Visit</H2>
-        <section>
+    <main class="booking-main">
+        <section class="booking">
             <form action="booking.html" method="POST">
+                <div><img src="images/calendar.png" alt="calendar"></div>
+                <div><H2>Book A Visit!</H2></div>
                 <div>
-                    <label for="fullname">Full Name</label>
-                    <input type="text" id="fullname"required>
+                    <ul>
+                        <li><label for="fullname">Full Name</label></li>
+                        <li><input type="text" id="fullname" required></li>
+                    </ul>
                 </div>
                 <div>
-                    <label for="phonenumber">Phone Number</label>
-                    <input type="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <ul>
+                        <li><label for="phonenumber">Phone Number</label></li>
+                        <li><input type="tel" id="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></li>
+                    </ul>
                 </div>               
                 <div>
-                    <label for="email">Your Email</label>
-                    <input type="email"id="youremail" placeholder="your@email.com" required>
+                    <ul>
+                        <li><label for="youremail">Your Email</label></li>
+                        <li><input type="email" id="youremail" placeholder="your@email.com" required></li>
+                    </ul>
                 </div>
                 <div>
-                    <label for="service">Service</label>
-                    <select name="service" id="service">
-                        <option value="optionone">Option 1</option>
-                        <option value="optiontwo">Option 2</option>
-                        <option value="optionthree">Option 3</option>
-                        <option value="optionfour">Option 4</option>
-                        <option value="optionfive">Option 5</option>
-                        <option value="optionsix">Option 6</option>
-                        <option value="optionseven">Option 7</option>
-                    </select>
+                    <ul>
+                        <li><label for="service">Service</label></li>
+                        <li>                   
+                            <select name="service" id="service">
+                                <option value="optionone">Option 1</option>
+                                <option value="optiontwo">Option 2</option>
+                                <option value="optionthree">Option 3</option>
+                                <option value="optionfour">Option 4</option>
+                                <option value="optionfive">Option 5</option>
+                                <option value="optionsix">Option 6</option>
+                                <option value="optionseven">Option 7</option>
+                            </select>
+                        </li>
+                    </ul>
                 </div>
                 <div>
-                    <label for="time">Choose you booking time</label>
-                    <input type="time" id="time" min="9:30" max="19:30" required>
+                    <ul>
+                        <li><label for="time">Choose you booking time</label></li>
+                        <li><input type="time" id="time" min="09:30" max="19:30" required></li>
+                    </ul>
                 </div>
                 <div>
-                    <label for="technician">Nail Technician</label>
-                    <small>If you have a preference</small>
-                    <select name="techname" id="techname">
-                        <option value=""></option>
-                    </select>
+                    <ul>
+                        <li><label for="techname">Nail Technician</label></li>
+                        <li><small>(If you have a preference)</small></li>
+                        <li>
+                            <select name="techname" id="techname">
+                                <option value="optionone">Option 1</option>
+                                <option value="optiontwo">Option 2</option>
+                                <option value="optionthree">Option 3</option>
+                                <option value="optionfour">Option 4</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li><label for="additionalinfo">Here you can upload a inspiration image or any other addititon inspiration you may have for you upcoming booking.</label></li>
+                        <li><input type="text" id="additionalinfo" style="width:400px;height: 250px;"></li>
+                        <!-- <li<input type="text" id="additionalinfo" placeholder="Start typing here..."></li> -->
+                    </ul>
                 </div>
                 <div>
-                    <label for="info">Here you can upload a inspiration image or any other addititon inspiration you may have for you upcoming booking.</label>
-                    <input type="textarea" id="additionalinfo" cols="40" row="4" placeholder="Start typing here...">
-                    <input type="file" id="photo" accept="image/png, image/jpeg">
-                </div>
-                <div>
-                    <input type="submit" value="submit">
+                    <input type="submit" value="BOOK">
                 </div>
             </form>
         </section>
@@ -76,10 +99,11 @@
                 <p>Phone Number: (613)999-9999</p>
                 <p>Email: blank@info.com</p>
             </div>
-            <div class="socalis">
+            <div class="socials">
                 <h3>Follow Us!</h3>
-                <a class= "socali-links"href=""></a>
-                <a class= "socali-links"href=""></a>
+
+                <a class= "social-links" href="https://www.instagram.com/"><img src="images/instgraam-icon.png" alt="instgram icon"></a>
+                <a class= "social-links" href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="facebook icon"></a>
             </div>
         </footer>
     </main>

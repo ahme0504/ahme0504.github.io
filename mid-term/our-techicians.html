@@ -4,49 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Techicians</title>
-    <link rel="stylessheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.png" alt="Artistic Nails and Spa logo">
+        <h1 class="company-name">Artistic Nails And Spa</h1>
         <!-- Using a checkbox to make a hamburger menu for moblie -->
+        <!-- link the labels "for" with the id of input to be able to check the label instead of the check box which is what makes the nav menu work™ -->
          <input type="checkbox" class="menu-btn" id="menu-btn">
          <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
-         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="our-techicians.html">Our Techicians</a></li>
-            <li><a href="booking.html">Bookings</a></li>
+         <ul class ="nav-menu">
+             <li><a href="home.html">Home</a></li>
+             <li><a href="our-techicians.html">Our Techicians</a></li>
+             <li><a href="booking.html">Bookings</a></li>
          </ul>
     </header>
-    <main>
+    <main class="our-techs-main">
         <h3>Our Techicians</h3>
-        <section class=tech1>
-            <img src="images/avatar-profile-icon.png" alt="Default avatar profile icon">
-            <h4>Techicians Name: </h4>
-            <h4>About them</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p>
-            <a href="http://127.0.0.1:5500/mid-term/booking.html"> Book Now</a>
-        </section>
-        <section class=tech2>
-            <img src="images/avatar-profile-icon.png" alt="Default avatar profile icon">
-            <h4>Techicians Name: </h4>
-            <h4>About them</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p>
-            <a href="http://127.0.0.1:5500/mid-term/booking.html"> Book Now</a>
-        </section>
-        <section class=tech3>
-            <img src="images/avatar-profile-icon.png" alt="Default avatar profile icon">
-            <h4>Techicians Name:</h4>
-            <h4>About them</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p>
-            <a href="http://127.0.0.1:5500/mid-term/booking.html">Book Now</a>
-        </section>
-        <section class=tech4>
-            <img src="images/avatar-profile-icon.png" alt="Default avatar profile icon">
-            <h4>Techicians Name:</h4>
-            <h4>About them</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p>
-            <a href="http://127.0.0.1:5500/mid-term/booking.html">Book Now</a>
+        <section class="our-techs">
+            <div class=tech1>
+                <ul>
+                    <li><img src="images/avatar-profile-icon.png" alt="Default avatar profile icon"></li>
+                    <li><h4>Techicians Name: Lorem Ipsum </h4></li>
+                    <li><h4>About Them</h4></li>
+                    <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p></li>
+                    <li><a href="http://127.0.0.1:5500/mid-term/booking.html"> Book Now</a></li>
+                </ul>
+            </div>
+            <div class=tech2>
+                <ul>
+                    <li><img src="images/avatar-profile-icon.png" alt="Default avatar profile icon"></li>
+                    <li><h4>Techicians Name: Lorem Ipsum </h4></li>
+                    <li><h4>About Them</h4></li>
+                    <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p></li>
+                    <li><a href="http://127.0.0.1:5500/mid-term/booking.html"> Book Now</a></li>
+                </ul>
+            </div>
+            <div class=tech3>
+                <ul>
+                    <li><img src="images/avatar-profile-icon.png" alt="Default avatar profile icon"></li>
+                    <li><h4>Techicians Name: Lorem Ipsum </h4></li>
+                    <li><h4>About Them</h4></li>
+                    <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p></li>
+                    <li><a href="http://127.0.0.1:5500/mid-term/booking.html"> Book Now</a></li>
+                </ul>
+            </div>
+            <div class=tech4>
+                <ul>
+                    <li><img src="images/avatar-profile-icon.png" alt="Default avatar profile icon"></li>
+                    <li><h4>Techicians Name: Lorem Ipsum </h4></li>
+                    <li><h4>About Them</h4></li>
+                    <li><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, aperiam sunt dicta odit eveniet laboriosam. Illum ratione ad cumque molestiae.</p></li>
+                    <li><a href="http://127.0.0.1:5500/mid-term/booking.html"> Book Now</a></li>
+                </ul>
+            </div>
         </section>
         <footer>
             <div class="footer-logo">
@@ -57,10 +68,11 @@
                 <p>Phone Number: (613)999-9999</p>
                 <p>Email: blank@info.com</p>
             </div>
-            <div class="socalis">
+            <div class="socials">
                 <h3>Follow Us!</h3>
-                <a class= "socali-links"href=""></a>
-                <a class= "socali-links"href=""></a>
+
+                <a class= "social-links" href="https://www.instagram.com/"><img src="images/instgraam-icon.png" alt="instgram icon"></a>
+                <a class= "social-links" href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="facebook icon"></a>
             </div>
         </footer>
     </main>

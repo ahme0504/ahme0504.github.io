@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylessheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header class="header">
-       <img src="images/logo.png" alt="Artistic Nails and Spa logo">
-       <!-- Using a checkbox to make a hamburger menu for moblie -->
-        <input type="checkbox" class="menu-btn" id="menu-btn">
-        <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="our-techicians.html">Our Techicians</a></li>
-            <li><a href="booking.html">Bookings</a></li>
-        </ul>
-   </header>
-   <main>
-       <div class="home-wrapper">
-            <section class="main-image">
+    <header class="header">
+        <h1 class="company-name">Artistic Nails And Spa</h1>
+        <!-- Using a checkbox to make a hamburger menu for moblie -->
+        <!-- link the labels "for" with the id of input to be able to check the label instead of the check box which is what makes the nav menu work™ -->
+         <input type="checkbox" class="menu-btn" id="menu-btn">
+         <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
+         <ul class ="nav-menu">
+             <li><a href="home.html">Home</a></li>
+             <li><a href="our-techicians.html">Our Techicians</a></li>
+             <li><a href="booking.html">Bookings</a></li>
+         </ul>
+    </header>
+    <div class="home-container">
+        <main>
+            <section class="main-image"> Main Image
             </section>
             <section class="about">
                 <h2>About Us</h2>
@@ -31,7 +32,7 @@
             </section>
             <section class="location-info">
                 <h2>Location Information</h2>
-                <table border="">
+                <table class="info-table" border="">
                     <thead>
                         <th>Day</th>
                         <th>Hours</th>
@@ -70,26 +71,26 @@
             </section>
             <section class= "map">
                 <!-- embeding a map from google maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!home1m14!1m8!1m3!1d3257.1331173172953!2d-75.6489430220882!3d45.35367266108154!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfcbc6b62b91d908!2sARTISTIC%20NAILS%20and%20SPA!5e0!3m2!1sen!2sca!4v1614715212244!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
-            </section>          
-
-        </div>
-
-        <footer>
-            <div class="footer-logo">
-                <img src="images/logo.png" alt="">
-            </div>
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>Phone Number: (613)999-9999</p>
-                <p>Email: blank@info.com</p>
-            </div>
-            <div class="socalis">
-                <h3>Follow Us!</h3>
-                <a class= "socali-links"href=""></a>
-                <a class= "socali-links"href=""></a>
-            </div>
-        </footer>
-   </main>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11215.26148832364!2d-75.6474973!3d45.3525391!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfcbc6b62b91d908!2sARTISTIC%20NAILS%20and%20SPA!5e0!3m2!1sen!2sca!4v1615485354367!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+            </section>
+            <footer>
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Phone Number: (613)999-9999</p>
+                    <p>Email: blank@info.com</p>
+                </div>
+                <div class="socials">
+                    <h3>Follow Us!</h3>
+    
+                    <a class= "social-links" href="https://www.instagram.com/"><img src="images/instgraam-icon.png" alt="instgram icon"></a>
+                    <a class= "social-links" href="https://www.facebook.com/"><img src="images/facebook-icon.png" alt="facebook icon"></a>
+                </div>
+            </footer>
+        </main>
+    </div>
+   
 </body>
 </html>

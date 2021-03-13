@@ -1,3 +1,286 @@
-body{
-    background-color: aqua;
+/* Using css custom property to make it easier if changes needed to be made latter */
+:root{
+    --company-banding-color: #AA9CB9;
+    --company-font: Montserrat,Arial,sans-serif;
+    --h1-and-nav-text-color: purple;
+}
+/* setting any syles that are the same throughout all the pages */
+.header{
+    background-color: var(--company-banding-color);
+     
+    width:100%;
+    z-index: 3;
+}
+h1{
+    color: var(--h1-and-nav-text-color);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Styling hamburger nav for all the website pages */
+.header ul{
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.header ul a {
+    display:block;
+    padding:20px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--h1-and-nav-text-color);
+}
+.header ul a:hover{
+    background-color: white;
+}
+.header .company-name{
+    float: left;
+    display:block;
+    font-size: 2em;
+    padding: 10px 20px;
+}
+.header .nav-menu{
+    clear:both;
+    max-height: 0;
+    transition: max-height .4s ease-out;
+}
+/* working on the main hamburger nav */
+.menu-icon{
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+}
+/* Removing the display on the check box so it isnt visible but can be used as somthing to click */
+.menu-btn{
+    display: none;
+}
+/* creating a one of the nav bars */
+.nav-icon{
+    background-color: var(--h1-and-nav-text-color);
+    display:block;
+    width: 20px;
+    height: 4px;
+    position: relative;
+    transition: background .4s ease-out;
+}
+/* creating the other nav bars */
+.nav-icon:before{
+    background-color: purple;
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 7px;
+    transition: all .4s ease-out;
+}
+.nav-icon:after{
+    background-color: var(--h1-and-nav-text-color);
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -7px;
+    transition: all .4s ease-out;
+}
+.menu-btn{
+    display: none;
+}
+/* This is what will make the nav menu transition and drop down when checked */
+.menu-btn:checked ~ .nav-menu{
+    max-height: 250px;
+}
+/* creating the code for when the nav menu is checked for it to animate into a X */
+/* When designing the animation and making the top and bottom line rotate it will go from the center so i chaged the positioning to be on top of eachother making it look like an X when rotated */
+.menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-40deg);
+    top: 0;
+}
+.menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(40deg);
+    top: 0;
+}
+/* Maling the nav menu reponsive on desk and table only one media query because my nav is the same on desktop and tablet */
+@media screen and (min-width:770px){
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding: 20px 30px;
+    }
+    .nav-menu{
+        clear:none;
+        float:right;
+        max-height: none;
+    }
+    .menu-icon{
+        display: none;
+    }
+}
+
+/* Home page styleing*/
+.home-container{
+    width: 90%;
+    margin: 10px auto;
+    background-color: royalblue;
+    text-align: center;
+}
+.info-table{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ---------------------------Footer section --------------------*/
+footer{
+    background-color: var(--company-banding-color);
+    text-align: center;
+    background-color: 100%;
+    padding-bottom: 2rem;
+}
+.footer-logo img{
+    width: 25%;
+}
+.socials img{
+    width: 5%;
+    display:inline-flex
+    
+}
+
+/* Home page styleing
+.home-container{
+    display: grid;
+    margin: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "heeader"
+    "content1"
+    "content2"
+    "content3"
+    "content4"
+    "content5"
+    "content6"
+    "footer";
+}
+.header{
+    grid-area: header;
+}
+.main-image{
+    grid-area: content1;
+}
+.about{
+    grid-area: content2;
+    text-align: center;
+}
+.hand-image{
+    grid-area: content3;
+}
+.location-info{
+    grid-area: content4;
+    text-align: center;
+}
+.map{
+    grid-area: content5;
+}
+.footer-logo{
+    grid-area: content6;
+} */
+
+
+/*                                -----------------------                                  */
+/* ------------------------------| Our Techicicans Page  |-------------------------------  */
+/*                                -----------------------                                  */
+.our-techs{
+    width: 80%;
+    margin: 10px;
+    display: inline-block;
+}
+.our-techs div{
+    min-width: 30%;
+    height: auto;
+    padding: 10px;
+    /* border: 2px solid var(--company-banding-color) ;  
+    padding-top: 20px; 
+    padding-bottom: 20px; */
+}
+.our-techs img{
+    width: 30%;
+}
+/* styling the a tag to look like a button  */
+.our-techs a{
+    text-decoration: none;
+    background-color: var(--company-banding-color) ;
+    border-radius:10px;
+    border: 5px solid var(--company-banding-color);
+}
+/* chageing the a tags active color when selcted from red to white  */
+.our-techs a:active{
+    color: white;
+}
+/* setting some space between the items(li) in the list(ul) - also - taking off any list stles*/
+.our-techs ul li {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.our-techs ul{
+    list-style: none;
+}
+.our-techs-main{
+    text-align: center;
+}
+
+/*                                ---------------                                 */
+/* ------------------------------| Booking Page  |-------------------------------  */
+/*                                ---------------                                  */
+/* sizing the calander that will show up on table and desktop */
+.booking img{
+    width: 40%;
+    height: auto;
+    margin-top: 50px;
+    display: none;
+}
+.booking h2{
+    color:var(--h1-and-nav-text-color);
+    text-decoration: underline;
+}
+.booking{
+    width: 80%;
+    display:inline-block;
+    color: var(--company-banding-color) ;
+}
+.booking-main{
+    text-align: center;
+}
+/* removing the list syles and padding some space in between */
+.booking li{
+    list-style: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+/* styling the boder of the input form changing the border to make it round and the company color  */
+.booking input{
+    border-radius: 2px;
+    border: solid 1px var(--company-banding-color);
+}
+/* styling the booking button : the color,size and the spacing of it */
+.booking input[type=submit]{
+    background-color: var(--company-banding-color);
+    width: 100px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* changing the text xolor */
+.booking input[value=BOOK]{
+    color: white;
+}
+.info div input{
+    padding: 10px;
 }
