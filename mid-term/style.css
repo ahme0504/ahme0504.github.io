@@ -130,7 +130,6 @@ h1{
 .home-container{
     width: 90%;
     margin: 10px auto;
-    background-color: royalblue;
     text-align: center;
 }
 .info-table{
@@ -153,46 +152,27 @@ footer{
     
 }
 
-/* Home page styleing
+/*                                ----------                                */
+/* ------------------------------| Home Page|-------------------------------  */
+/*                                ----------                                */
 .home-container{
-    display: grid;
-    margin: 50px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "heeader"
-    "content1"
-    "content2"
-    "content3"
-    "content4"
-    "content5"
-    "content6"
-    "footer";
+    width: 70%;    
 }
-.header{
-    grid-area: header;
+.main-image img{
+    width: 350px;
+    height: auto;
 }
-.main-image{
-    grid-area: content1;
+.map iframe{
+    width: 380px;
+    padding:10px
 }
-.about{
-    grid-area: content2;
-    text-align: center;
+.home-container section{
+    margin: 10px;
 }
-.hand-image{
-    grid-area: content3;
+.hand-image img{
+    width: 300px;
+    height: auto;
 }
-.location-info{
-    grid-area: content4;
-    text-align: center;
-}
-.map{
-    grid-area: content5;
-}
-.footer-logo{
-    grid-area: content6;
-} */
-
 
 /*                                -----------------------                                  */
 /* ------------------------------| Our Techicicans Page  |-------------------------------  */
@@ -234,6 +214,10 @@ footer{
 }
 .our-techs-main{
     text-align: center;
+}
+.our-techs h2{
+    color:var(--h1-and-nav-text-color);
+    text-decoration: underline;
 }
 
 /*                                ---------------                                 */
