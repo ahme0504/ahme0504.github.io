@@ -357,12 +357,9 @@ footer{
     .tech4{
         grid-area: tech4;
     }
-
-
     footer{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-row: 1;
         grid-template-areas: 
         "logo contact-info socials";
     }
