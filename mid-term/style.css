@@ -7,12 +7,11 @@
 /* setting any syles that are the same throughout all the pages */
 .header{
     background-color: var(--company-banding-color);
-     
     width:100%;
     z-index: 3;
 }
 h1{
-    color: var(--h1-and-nav-text-color);
+    color: var(--h1-and-nav-text-color);   
 }
 
 *{
@@ -108,39 +107,10 @@ h1{
     transform: rotate(40deg);
     top: 0;
 }
-/* Maling the nav menu reponsive on desk and table only one media query because my nav is the same on desktop and tablet */
-@media screen and (min-width:770px){
-    .header li{
-        float: left;
-    }
-    .header li a{
-        padding: 20px 30px;
-    }
-    .nav-menu{
-        clear:none;
-        float:right;
-        max-height: none;
-    }
-    .menu-icon{
-        display: none;
-    }
-}
-
-/* Home page styleing*/
-.home-container{
-    width: 90%;
-    margin: 10px auto;
-    text-align: center;
-}
-.info-table{
-    margin-left: auto;
-    margin-right: auto;
-}
 /* ---------------------------Footer section --------------------*/
 footer{
     background-color: var(--company-banding-color);
     text-align: center;
-    background-color: 100%;
     padding-bottom: 2rem;
 }
 .footer-logo img{
@@ -148,23 +118,29 @@ footer{
 }
 .socials img{
     width: 5%;
-    display:inline-flex
-    
+    display:inline-flex   
 }
+
 
 /*                                ----------                                */
 /* ------------------------------| Home Page|-------------------------------  */
 /*                                ----------                                */
+.info-table{
+    margin-left: auto;
+    margin-right: auto;
+}
 .home-container{
-    width: 70%;    
+    width: 70%; 
+    margin: 10px auto;
+    text-align: center;  
 }
 .main-image img{
     width: 350px;
     height: auto;
 }
 .map iframe{
-    width: 380px;
-    padding:10px
+    width: 360px; 
+    padding-top: 6px; 
 }
 .home-container section{
     margin: 10px;
@@ -198,7 +174,7 @@ footer{
     text-decoration: none;
     background-color: var(--company-banding-color) ;
     border-radius:10px;
-    border: 5px solid var(--company-banding-color);
+    border: 5px solid var(--company-banding-color); 
 }
 /* chageing the a tags active color when selcted from red to white  */
 .our-techs a:active{
@@ -219,6 +195,7 @@ footer{
     color:var(--h1-and-nav-text-color);
     text-decoration: underline;
 }
+
 
 /*                                ---------------                                 */
 /* ------------------------------| Booking Page  |-------------------------------  */
@@ -261,10 +238,203 @@ footer{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/* using the animation property on the submit button to make is shake a bit when its being hovered on*/
+.booking input[type=submit]:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake{
+    50%{
+        transform:translate(-1px,-1px) rotate(-1deg);
+    }
+    100%{
+        transform:translate(-1px,1px) rotate(-1deg);
+    }
+}
 /* changing the text xolor */
 .booking input[value=BOOK]{
     color: white;
 }
 .info div input{
     padding: 10px;
+}
+
+/*                                ---------------                                  */
+/* ------------------------------| Layout Section |-------------------------------  */
+/*                                ---------------                                  */
+
+/* Home layout */
+/* .home-container{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+        "blockone"
+        "blocktwo"
+        "blockthree"
+        "blockfour"
+        "blockfive";
+} */
+
+/* Making the nav menu reponsive on desk and table only one media query because my nav is the same on desktop and tablet */
+/* @media (min-width:600px){
+    .header li{
+        float: left;
+    }
+    .header li a{
+        padding: 20px 30px;
+    }
+    .nav-menu{
+        clear:none;
+        float:right;
+        max-height: none;
+    }
+    .menu-icon{
+        display: none;
+    }
+}
+.home-container{
+    display: grid;
+    height: auto;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "main-image main-image"
+    "about hand-image"
+    "location-info map";
+}
+.main-image{
+    grid-area: main-image;
+}
+.about{
+    grid-area: about;
+}
+.hand-image{
+    grid-area: hand-image;
+}
+.loctaion-info{
+    grid-area: location-info;
+}
+.map{
+    grid-area: map;
+} */
+/*                                -------------------------------                                  */
+/* ------------------------------| Layout Our-Techicians Section |-------------------------------  */
+/*                                -------------------------------                                  */
+@media (min-width:600px){
+    .our-techs-main{
+        width: 100%;
+    }    
+    .booking img{
+        display: inline-block;
+        width: 450px;
+        height: 450px;
+        padding: 10px;
+        justify-content: center;
+    }
+    main{
+        display: grid;
+        margin: 0;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas: 
+        "header header"
+        "tech1 tech2"
+        "tech3 tech4";
+    }
+    .our-techs-main h2{
+        grid-area: header;
+    }
+    .tech1{
+        grid-area: tech1;
+    }
+    .tech12{
+        grid-area: tech2;
+    }
+    .tech3{
+        grid-area: tech3;
+    }
+    .tech4{
+        grid-area: tech4;
+    }
+
+
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: 1;
+        grid-template-areas: 
+        "logo contact-info socials";
+    }
+    .footer-logo{
+        grid-area: logo;
+    }
+    .contact-info{
+        grid-area: contact-info;
+    }
+    .socials{
+        grid-area: socials;
+    }
+/*                                ------------------------                                 */
+/* ------------------------------| Layout Booking Section |-------------------------------  */
+/*                                ------------------------                                  */
+    /* creating a 2 colum grid to span the form into two also making the calender and header take up its own whole row */
+.booking{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "calender calender"
+        "header header "
+        "name number"
+        "email service"
+        "time techname"
+        "info info"
+        "submit submit";
+    }
+    .booking img{
+        grid-area: calender;
+    }
+    .booking h2{
+        grid-area: header;
+    }
+    .fullname{
+        grid-area: name;
+    }
+    .number{
+        grid-area: number;
+    }
+    .email{
+        grid-area: email;
+    }
+    .service{
+        grid-area: service;
+    }
+    .time{
+        grid-area: time;
+    }
+    .techname{
+        grid-area: techname;
+    }
+    .info{
+        grid-area: info;
+    }
+    .submit{
+        grid-area: submite;
+    }
+}
+/* Making the grid for desk top into 3 columns so the form can spand 3 colums wide instead of 2 */
+@media (min-width:1000px){
+    .booking{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "calender calender"
+        "header header"
+        "name number email"
+        "service time techname"
+        "info info info"
+        "submit submit submit";
+    }
 }

@@ -24,25 +24,25 @@
             <form action="booking.html" method="POST">
                 <div><img src="images/calendar.png" alt="calendar"></div>
                 <div><H2>Book A Visit!</H2></div>
-                <div>
-                    <ul>
+                <div class="fullname">
+                    <ul >
                         <li><label for="fullname">Full Name</label></li>
                         <li><input type="text" id="fullname" required></li>
                     </ul>
                 </div>
-                <div>
+                <div class="number">
                     <ul>
                         <li><label for="phonenumber">Phone Number</label></li>
                         <li><input type="tel" id="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></li>
                     </ul>
                 </div>               
-                <div>
+                <div class="email">
                     <ul>
                         <li><label for="youremail">Your Email</label></li>
                         <li><input type="email" id="youremail" placeholder="your@email.com" required></li>
                     </ul>
                 </div>
-                <div>
+                <div class="service">
                     <ul>
                         <li><label for="service">Service</label></li>
                         <li>                   
@@ -58,13 +58,13 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="time">
                     <ul>
                         <li><label for="time">Choose you booking time</label></li>
                         <li><input type="time" id="time" min="09:30" max="19:30" required></li>
                     </ul>
                 </div>
-                <div>
+                <div class="techname">
                     <ul>
                         <li><label for="techname">Nail Technician</label></li>
                         <li><small>(If you have a preference)</small></li>
@@ -85,7 +85,7 @@
                         <!-- <li<input type="text" id="additionalinfo" placeholder="Start typing here..."></li> -->
                     </ul>
                 </div>
-                <div>
+                <div class="submit">
                     <input type="submit" value="BOOK">
                 </div>
             </form>
