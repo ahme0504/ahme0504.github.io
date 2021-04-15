@@ -1,0 +1,13 @@
+:root{
+    --company-banding-color:#575C55;
+    --company-font: Montserrat,Arial,sans-serif;
+}
+nav{
+    background-color: var(--company-banding-color);
+}
+body{
+    color: var(--company-banding-color);
+}
+body{
+    font:var(--company-font);
+}
