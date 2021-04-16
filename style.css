@@ -2,6 +2,9 @@
     --company-banding-color:#575C55;
     --company-font: Montserrat,Arial,sans-serif;
 }
+footer{
+    background-color: var(--company-banding-color);
+}
 nav{
     background-color: var(--company-banding-color);
 }
